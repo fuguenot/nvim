@@ -8,9 +8,18 @@ local comment = {
     opts = {},
 }
 
-local autoclose = {
-    'm4xshen/autoclose.nvim',
+local neoformat = {
+    'sbdchd/neoformat',
+    cmd = 'Neoformat',
+    keys = {
+        { '<leader>f', '<cmd>Neoformat<cr>', desc = 'Format buffer' },
+    },
+}
+
+local autopairs = {
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter',
     opts = {},
 }
 
-return { surround, comment, autoclose }
+return { surround, comment, neoformat, autopairs }

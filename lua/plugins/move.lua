@@ -1,6 +1,6 @@
 local hml = {
     'mawkler/hml.nvim',
-    opts = {}
+    opts = {},
 }
 
 local whichkey = {
@@ -11,10 +11,12 @@ local whichkey = {
     keys = {
         {
             '<leader>?',
-            function() require('which-key').show({ global = false }) end,
-            desc = 'Buffer Local Keymaps (which-key)'
-        }
-    }
+            function()
+                require('which-key').show({ global = false })
+            end,
+            desc = 'Buffer Local Keymaps (which-key)',
+        },
+    },
 }
 
 local leap = {
@@ -22,7 +24,7 @@ local leap = {
     dependencies = { 'tpope/vim-repeat' },
     config = function()
         require('leap').set_default_mappings()
-    end
+    end,
 }
 
 return { hml, whichkey, leap }

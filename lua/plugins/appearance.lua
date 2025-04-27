@@ -7,7 +7,7 @@ local edge = {
         vim.g.edge_style = 'aura'
         vim.g.edge_dim_foreground = true
         vim.cmd.colorscheme('edge')
-    end
+    end,
 }
 
 local ibl = {

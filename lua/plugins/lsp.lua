@@ -4,11 +4,11 @@ local lspconfig = {
     dependencies = {
         { 'ms-jpq/coq_nvim', branch = 'coq', build = ':COQdeps' },
         { 'ms-jpq/coq.artifacts', branch = 'artifacts' },
-        { 'ms-jpq/coq.thirdparty', branch = '3p' }
+        { 'ms-jpq/coq.thirdparty', branch = '3p' },
     },
     init = function()
         vim.g.coq_settings = {
-            auto_start = true
+            auto_start = 'shut-up',
         }
     end,
     config = function()
@@ -18,7 +18,7 @@ local lspconfig = {
         vim.lsp.enable('cmake')
         vim.lsp.enable('pylsp')
         vim.lsp.enable('rust_analyzer')
-    end
+    end,
 }
 
 return { lspconfig }

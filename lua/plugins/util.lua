@@ -4,8 +4,9 @@ local telescope = {
     dependencies = {
         'nvim-lua/plenary.nvim',
         'polirritmico/telescope-lazy-plugins.nvim',
-        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }
+        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     },
+    cmd = 'Telescope',
     keys = {
         { '<leader>tf', '<cmd>Telescope find_files<cr>', desc = 'Telescope find files' },
         { '<leader>tt', '<cmd>Telescope buffers<cr>', desc = 'Telescope buffers' },
@@ -18,7 +19,7 @@ local telescope = {
         local tel = require('telescope')
         tel.load_extension('fzf')
         tel.load_extension('lazy_plugins')
-    end
+    end,
 }
 
 return { telescope }

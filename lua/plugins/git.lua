@@ -1,6 +1,6 @@
 local gitsigns = {
     'lewis6991/gitsigns.nvim',
-    opts = {}
+    opts = {},
 }
 
 return { gitsigns }
